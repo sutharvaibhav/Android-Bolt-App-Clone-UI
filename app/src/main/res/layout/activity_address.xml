@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/menubar"
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/shape1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ask"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/menubar" />
+
+    <TextView
+        android:id="@+id/caTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoeui"
+        android:text="Address"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="@id/menubar"
+        app:layout_constraintTop_toBottomOf="@id/menubar"
+        android:layout_marginTop="30dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/caTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caTxt"
+        app:layout_constraintBottom_toTopOf="@id/addAddress"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/address_card"
+        />
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btnbg"
+        android:fontFamily="@font/segoeui"
+        android:text="Continue To Payment"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:id="@+id/payBt"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintStart_toStartOf="@id/payBt"
+        app:layout_constraintEnd_toEndOf="@id/payBt"
+        app:layout_constraintBottom_toTopOf="@id/payBt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dash_et"
+        android:fontFamily="@font/segoeui"
+        android:text="Add Address"
+        android:textAllCaps="false"
+        android:paddingLeft="40dp"
+        android:textColor="@color/theme"
+        android:id="@+id/addAddress"
+        />
+
+    <ImageView
+        android:layout_width="17sp"
+        android:layout_height="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/addAddress"
+        app:layout_constraintEnd_toEndOf="@id/addAddress"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="@id/addAddress"
+        app:layout_constraintTop_toTopOf="@id/addAddress"
+        android:background="@drawable/blueask"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

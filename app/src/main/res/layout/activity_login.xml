@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white">
+    <ImageView
+        android:layout_width="22dp"
+        android:layout_height="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/shape1"
+        android:id="@+id/arrow"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        app:layout_constraintStart_toStartOf="@+id/arrow"
+        app:layout_constraintTop_toBottomOf="@+id/arrow"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/segoeui"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/logIn"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/arrow"
+        app:layout_constraintTop_toBottomOf="@id/logIn"
+        android:layout_marginTop="50dp"
+        android:text="Email"
+        android:fontFamily="@font/segoeui"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:id="@+id/eTxt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/eTxt"
+        app:layout_constraintTop_toBottomOf="@id/eTxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/eEt"
+        android:text="vaibhavs.banshisoftware@gmail.com"
+        android:fontFamily="@font/segoeui"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/eTxt"
+        app:layout_constraintTop_toBottomOf="@id/eEt"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:fontFamily="@font/segoeui"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:id="@+id/pTxt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/pTxt"
+        app:layout_constraintTop_toBottomOf="@id/pTxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textPassword"
+        android:id="@+id/pEt"
+        android:text="123456789"
+        android:fontFamily="@font/segoeui"
+        />
+    <ImageView
+        android:id="@+id/showHide"
+        android:layout_width="18.5dp"
+        android:layout_height="12.5dp"
+        android:src="@drawable/view"
+        app:layout_constraintTop_toTopOf="@id/pEt"
+        app:layout_constraintBottom_toBottomOf="@id/pEt"
+        app:layout_constraintEnd_toEndOf="@id/pEt"
+        android:layout_marginRight="25dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/logBtn"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btnbg"
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pEt" />
+
+    <TextView
+        android:id="@+id/sinUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/segoeui"
+        android:text="Don’t have an acoount ?   Sign Up"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logBtn"
+        android:textColor="@color/black"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
